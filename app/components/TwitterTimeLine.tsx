@@ -20,7 +20,7 @@ const TwitterTimeLine: React.FC<TwitterTimeLineProps> = ({ url }) => {
 
   return (
     <>
-      <div className="m-10 md:w-1/4 md:mx-auto">
+      <div className="m-10 md:w-1/4 md:mx-auto text-center">
         <div className="twitter-widget-container w-full max-w-[400px] h-[500px] overflow-auto">
           <a
             className="twitter-timeline"
@@ -28,7 +28,7 @@ const TwitterTimeLine: React.FC<TwitterTimeLineProps> = ({ url }) => {
             data-height="500"
             data-theme="light"
           >
-            Tweets by yuorei71
+            @yuorei71 loading...
           </a>
         </div>
       </div>
