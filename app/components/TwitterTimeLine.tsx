@@ -28,7 +28,7 @@ const TwitterTimeLine: React.FC<TwitterTimeLineProps> = ({ url }) => {
             data-height="500"
             data-theme="light"
           >
-            @yuorei71 loading...
+            Now loading...
           </a>
         </div>
       </div>
