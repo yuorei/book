@@ -2,20 +2,16 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-interface ImageItem {
+export interface ImageItem {
   src: string;
   link: string;
 }
 
-const images: ImageItem[] = [
-  { src: "https://via.placeholder.com/150", link: "/page1" },
-  { src: "https://via.placeholder.com/300", link: "/page2" },
-  { src: "https://via.placeholder.com/400", link: "/page3" },
-  { src: "https://via.placeholder.com/500", link: "/page4" },
-  { src: "https://via.placeholder.com/600", link: "/page5" },
-];
+interface InfiniteCarouselProps {
+  images: ImageItem[];
+}
 
-const InfiniteCarousel: React.FC = () => {
+const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const router = useRouter();
 
