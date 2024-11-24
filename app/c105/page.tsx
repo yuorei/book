@@ -1,7 +1,7 @@
-"use client";
-import React, { useEffect } from "react";
+import React from "react";
 import InfiniteCarousel from "@/app/components/Carousel";
 import { ImageItem } from "@/app/components/Carousel";
+import TwitterTimeLine from "@/app/components/TwitterTimeLine";
 
 const images: ImageItem[] = [
   { src: "https://via.placeholder.com/150", link: "/page1" },
@@ -18,18 +18,6 @@ const newsItems = [
 ];
 
 const C105: React.FC = () => {
-  useEffect(() => {
-    // Twitterウィジェットのスクリプトを動的に読み込む
-    const script = document.createElement("script");
-    script.src = "https://platform.twitter.com/widgets.js";
-    script.async = true;
-    script.charset = "utf-8";
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <>
       <div className="relative w-full overflow-hidden">
@@ -72,18 +60,7 @@ const C105: React.FC = () => {
           </table>
         </div>
       </div>
-      <div className="m-10 md:w-1/4 md:mx-auto">
-        <div className="twitter-widget-container w-full max-w-[400px] h-[500px] overflow-auto">
-          <a
-            className="twitter-timeline"
-            href="https://twitter.com/yuorei71?ref_src=twsrc%5Etfw"
-            data-height="500"
-            data-theme="light"
-          >
-            Tweets by yuorei71
-          </a>
-        </div>
-      </div>
+      <TwitterTimeLine url="https://twitter.com/yuorei71?ref_src=twsrc%5Etfw" />
     </>
   );
 };
