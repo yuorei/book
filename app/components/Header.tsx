@@ -1,31 +1,30 @@
+import Link from "next/link";
+
 const Header: React.FC = () => {
   return (
     <header className="bg-white text-black py-4">
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
         <div className="text-xl font-bold">
-          <a href="/" className="hover:text-blue-300">
+          <Link href="/" className="hover:text-blue-300">
             yuorei books
-          </a>
+          </Link>
         </div>
         <nav>
           <ul className="flex space-x-6">
             <li>
-              <a href="/" className="hover:text-blue-300">
+              <Link href="/" className="hover:text-blue-300">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://techbookfest.org/product/pRrU891w9zJ43YMMqdAq3m?productVariantID=1zDhVeRp7XmAGE8nePj2Zt"
-                className="hover:text-blue-300"
-              >
+              <Link href="/techbookfest17" className="hover:text-blue-300">
                 技術書典17
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/c105" className="hover:text-blue-300">
+              <Link href="/c105" className="hover:text-blue-300">
                 C105
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

@@ -17,22 +17,6 @@ const Footer: React.FC = () => {
                 X (Twitter)
               </a>
             </li>
-            {/* <li>
-                <a
-                  href="/privacy"
-                  className="hover:text-blue-400"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/terms"
-                  className="hover:text-blue-400"
-                >
-                  Terms of Service
-                </a>
-              </li> */}
           </ul>
         </div>
       </div>
